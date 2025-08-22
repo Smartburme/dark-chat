@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Chat — Splash</title>
+  <style>
+    /* Body & center splash */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      color: #0f0;
+      overflow: hidden;
+    }
+
+    .splash-container {
+      text-align: center;
+    }
+
+    /* Spring text animation */
+    .spring-text {
+      font-size: 48px;
+      font-weight: bold;
+      color: #0f0;
+      margin-bottom: 30px;
+      display: inline-block;
+      animation: spring 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes spring {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-15px) scale(1.1); }
+      100% { transform: translateY(0) scale(1); }
+    }
+
+    /* Loader spinner */
+    .loader {
+      border: 6px solid #111;
+      border-top: 6px solid #0f0;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: auto;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Responsive text for small devices */
+    @media (max-width: 600px) {
+      .spring-text {
+        font-size: 32px;
+      }
+
+      .loader {
+        width: 40px;
+        height: 40px;
+        border-width: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="splash-container">
+    <h1 class="spring-text">Dark Chat</h1>
+    <div class="loader"></div>
+  </div>
+
+  <script>
+    // Redirect to login.html after 3 seconds
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 3000);
+  </script>
+</body>
+</html>
