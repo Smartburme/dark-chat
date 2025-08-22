@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frame Editing - Dark Chat</title>
+  <link rel="stylesheet" href="css/frame.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark">
+
+  <!-- Header -->
+  <header class="topbar">
+    <h1>Edit Frame</h1>
+  </header>
+
+  <!-- Frame Options -->
+  <section class="frame-section">
+
+    <h2>Choose a frame type:</h2>
+    <div class="frames">
+      <div class="frame" data-frame="frame1"><img src="assets/frame1.png" alt="Frame 1"></div>
+      <div class="frame" data-frame="frame2"><img src="assets/frame2.png" alt="Frame 2"></div>
+      <div class="frame" data-frame="frame3"><img src="assets/frame3.png" alt="Frame 3"></div>
+    </div>
+
+    <h2>Upload your own frame:</h2>
+    <input type="file" id="customFrameUpload" accept="image/*">
+
+    <h2>Select frame size:</h2>
+    <select id="frameSizeSelect">
+      <option value="small">Small</option>
+      <option value="medium" selected>Medium</option>
+      <option value="large">Large</option>
+    </select>
+
+    <h2>Preview:</h2>
+    <div class="preview-container">
+      <img id="previewProfile" src="assets/default-avatar.png" alt="Profile Preview">
+      <img id="previewFrame" src="" alt="Frame Preview">
+    </div>
+
+    <button id="applyFrameBtn"><i class="fa fa-check"></i> Apply Frame</button>
+  </section>
+
+  <script src="js/frame.js"></script>
+</body>
+</html>

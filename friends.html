@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Chat — Friends</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/friends.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>Friends</h1>
+</header>
+
+<div class="friends-container">
+  <!-- Friend List -->
+  <aside class="friends-list">
+    <div class="friend">
+      <img src="assets/img/user2.png" class="avatar">
+      <span>Jane Doe</span>
+    </div>
+    <div class="friend active">
+      <img src="assets/img/user3.png" class="avatar">
+      <span>Mike Ross</span>
+    </div>
+    <div class="friend">
+      <img src="assets/img/user4.png" class="avatar">
+      <span>Sarah Lee</span>
+    </div>
+  </aside>
+
+  <!-- Chat Section -->
+  <main class="friend-chat">
+    <div class="chat-header">
+      <img src="assets/img/user3.png" class="avatar">
+      <h3>Mike Ross</h3>
+      <div class="chat-actions">
+        <button><i class="fa fa-ban"></i> Block</button>
+        <button><i class="fa fa-image"></i> Bg</button>
+      </div>
+    </div>
+
+    <div class="chat-messages">
+      <div class="msg friend">
+        <p>Hey, testing private chat!</p>
+        <span class="time">11:05</span>
+      </div>
+      <div class="msg user">
+        <p>Works fine </p>
+        <span class="time">11:06</span>
+      </div>
+    </div>
+
+    <footer class="chat-input">
+      <input type="text" placeholder="Type a message...">
+      <button><i class="fa fa-smile"></i></button>
+      <button><i class="fa fa-microphone"></i></button>
+      <button><i class="fa fa-paperclip"></i></button>
+      <button><i class="fa fa-paper-plane"></i></button>
+    </footer>
+  </main>
+</div>
+
+<nav class="bottom-nav">
+  <a href="main.html"><i class="fa fa-home"></i></a>
+  <a href="group.html"><i class="fa fa-users"></i></a>
+  <a href="#" class="plus-btn"><i class="fa fa-plus"></i></a>
+  <a href="friends.html" class="active"><i class="fa fa-user-friends"></i></a>
+  <a href="profile.html"><i class="fa fa-user"></i></a>
+</nav>
+
+<script src="js/friends.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Chat - Profile</title>
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark">
+
+  <!-- Header -->
+  <header class="topbar">
+    <h1>My Profile</h1>
+  </header>
+
+  <!-- Profile Card -->
+  <section class="profile-card">
+    <div class="profile-photo">
+      <img id="profileImg" src="../assets/default-avatar.png" alt="Profile">
+      <label for="uploadPhoto" class="upload-btn"><i class="fa fa-camera"></i></label>
+      <input type="file" id="uploadPhoto" accept="image/*" hidden>
+    </div>
+    <div class="profile-info">
+      <h2 id="profileName">Anonymous User</h2>
+      <p id="profileEmail">example@gmail.com</p>
+    </div>
+  </section>
+
+  <!-- Profile Details -->
+  <section class="profile-details">
+    <div class="detail"><span>Name:</span><span id="detailName">Anonymous User</span></div>
+    <div class="detail"><span>Gender:</span><span id="detailGender">Not set</span></div>
+    <div class="detail"><span>Age:</span><span id="detailAge">0</span></div>
+    <div class="detail"><span>Gmail:</span><span id="detailGmail">example@gmail.com</span></div>
+    <div class="detail"><span>Password:</span><span id="detailPassword">******</span></div>
+    <div class="detail"><span>Mobile:</span><span id="detailMobile">+95</span></div>
+  </section>
+
+  <!-- Action Buttons -->
+  <div class="action-btns">
+    <button id="editBtn"><i class="fa fa-edit"></i> Edit Profile</button>
+    <button id="frameBtn"><i class="fa fa-image"></i> Edit Frame</button>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="main.html"><i class="fa fa-home"></i></a>
+    <a href="group.html"><i class="fa fa-users"></i></a>
+    <a href="friends.html"><i class="fa fa-user-friends"></i></a>
+    <a href="profile.html" class="active"><i class="fa fa-user"></i></a>
+    <a href="setting.html"><i class="fa fa-cog"></i></a>
+  </nav>
+
+  <!-- Profile Script -->
+  <script src="js/profile.js"></script>
+
+</body>
+</html>

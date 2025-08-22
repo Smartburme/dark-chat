@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Chat — Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark">
+
+<header class="topbar">
+  <h1>Dark Chat</h1>
+</header>
+
+<main class="feed">
+
+  <!-- Posts Feed -->
+  <div id="postsFeed"></div>
+
+</main>
+
+<!-- New Post Modal -->
+<div id="newPostModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>New Post</h2>
+    <textarea id="modalPostContent" placeholder="What's on your mind?"></textarea>
+    <input type="file" id="modalPostImage" accept="image/*">
+    <button id="modalPostBtn"><i class="fa fa-paper-plane"></i> Post</button>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a href="main.html"><i class="fa fa-home"></i></a>
+  <a href="group.html"><i class="fa fa-users"></i></a>
+  <a href="#" class="plus-btn" id="plusBtn"><i class="fa fa-plus"></i></a>
+  <a href="friends.html"><i class="fa fa-user-friends"></i></a>
+  <a href="profile.html"><i class="fa fa-user"></i></a>
+</nav>
+
+<script src="js/script.js"></script>
+</body>
+</html>
