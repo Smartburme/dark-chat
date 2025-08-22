@@ -1,0 +1,79 @@
+/* =========================
+   Dark Chat - setting.css
+========================= */
+body.dark {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar {
+  background: #111;
+  color: #0f0;
+  padding: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #222;
+}
+
+.settings-section {
+  padding: 20px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #222;
+}
+
+.setting-item span {
+  font-weight: bold;
+  color: #0f0;
+}
+
+.setting-item button {
+  background: #0f0;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.setting-item select {
+  background: #111;
+  color: #fff;
+  border: 1px solid #0f0;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #222;
+}
+
+.bottom-nav a {
+  color: #888;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.bottom-nav a.active, 
+.bottom-nav a:hover {
+  color: #0f0;
+}

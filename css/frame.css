@@ -1,0 +1,127 @@
+body.dark {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Header */
+.topbar {
+  text-align: center;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 1px solid #222;
+  color: #0f0;
+}
+
+/* Section */
+.frame-section {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Frames grid */
+.frames {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  margin-bottom: 20px;
+}
+
+.frame {
+  border: 3px solid #222;
+  border-radius: 12px;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+  width: 80px;
+  height: 80px;
+}
+
+.frame.selected {
+  border-color: #0f0;
+  transform: scale(1.1);
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Custom upload input */
+#customFrameUpload {
+  margin: 10px 0 20px 0;
+}
+
+/* Frame size select */
+#frameSizeSelect {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Preview container */
+.preview-container {
+  position: relative;
+  display: inline-block;
+}
+
+#previewProfile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#previewFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+}
+
+/* Apply Button */
+#applyFrameBtn {
+  background-color: #0f0;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+#applyFrameBtn:hover {
+  background-color: #0c0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #previewProfile, #previewFrame {
+    width: 80px;
+    height: 80px;
+  }
+  .frame {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #previewProfile, #previewFrame {
+    width: 150px;
+    height: 150px;
+  }
+  .frame {
+    width: 100px;
+    height: 100px;
+  }
+}

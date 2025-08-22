@@ -1,0 +1,108 @@
+:root {
+  --bg: #000;
+  --frame: #00ff88;
+  --text: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== Topbar ===== */
+.topbar {
+  background: #111;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid var(--frame);
+}
+
+/* ===== Posts ===== */
+.feed {
+  padding: 20px;
+}
+.post-card {
+  background: #111;
+  border: 1px solid var(--frame);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post-header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.post-actions button {
+  background: transparent;
+  border: none;
+  color: var(--frame);
+  cursor: pointer;
+}
+
+/* ===== Bottom Nav ===== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #111;
+  border-top: 2px solid var(--frame);
+  padding: 10px 0;
+}
+.bottom-nav a {
+  color: var(--text);
+  font-size: 20px;
+  text-decoration: none;
+}
+.plus-btn {
+  background: var(--frame);
+  color: #000 !important;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: -25px;
+}
+
+/* ===== Responsive Device View ===== */
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+  .bottom-nav {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    border-top: none;
+    border-right: 2px solid var(--frame);
+  }
+  .bottom-nav a, .plus-btn {
+    margin: 20px auto;
+  }
+  .feed {
+    padding: 40px;
+  }
+}

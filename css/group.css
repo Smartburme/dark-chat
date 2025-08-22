@@ -1,0 +1,174 @@
+/* ============================
+   Group Chat Page (Dark Chat)
+   ============================ */
+
+:root {
+  --bg: #000;
+  --frame: #00ff88;
+  --text: #fff;
+  --card: #111;
+}
+
+/* ===== Chat Window ===== */
+.chat-window {
+  padding: 80px 15px 80px; /* topbar + input space */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  height: calc(100vh - 140px);
+}
+
+/* ===== Chat Bubble Wrapper ===== */
+.chat-bubble {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  position: relative;
+}
+
+.chat-bubble .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* ===== Bubble Content ===== */
+.chat-bubble .bubble {
+  background: var(--card);
+  border: 1px solid var(--frame);
+  border-radius: 15px;
+  padding: 10px 15px;
+  max-width: 65%;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.chat-bubble .bubble .time {
+  display: block;
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 3px;
+  text-align: right;
+}
+
+/* Friend Messages */
+.chat-bubble.friend {
+  justify-content: flex-start;
+}
+.chat-bubble.friend .bubble {
+  border-top-left-radius: 0;
+}
+
+/* User Messages */
+.chat-bubble.user {
+  justify-content: flex-end;
+}
+.chat-bubble.user .bubble {
+  border-top-right-radius: 0;
+  background: var(--frame);
+  color: #000;
+}
+
+/* ===== Input Area ===== */
+.chat-input {
+  position: fixed;
+  bottom: 55px;
+  left: 0;
+  right: 0;
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 2px solid var(--frame);
+  z-index: 5;
+}
+
+.chat-input input {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--frame);
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: var(--text);
+  outline: none;
+}
+
+.chat-input button {
+  background: transparent;
+  border: none;
+  color: var(--frame);
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* ===== Message Options Menu ===== */
+.msg-menu {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.msg-options {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  background: var(--card);
+  border: 1px solid var(--frame);
+  border-radius: 8px;
+  padding: 5px;
+  z-index: 10;
+  min-width: 120px;
+}
+
+.msg-options button {
+  display: block;
+  background: none;
+  border: none;
+  color: var(--text);
+  padding: 6px 10px;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.msg-options button:hover {
+  background: var(--frame);
+  color: #000;
+}
+
+.msg-options.show {
+  display: block;
+}
+
+/* Emoji Reaction */
+.reaction {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+/* ===== Responsive Device View ===== */
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+  }
+
+  .chat-window {
+    height: calc(100vh - 60px);
+    padding: 80px 40px 80px;
+  }
+
+  .chat-input {
+    bottom: 0;
+    left: 80px;
+  }
+}
